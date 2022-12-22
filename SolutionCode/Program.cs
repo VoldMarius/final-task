@@ -19,3 +19,22 @@ int FindLength(string[] array)
     }
     return length;
 }
+string[] ArrayToThreeChar(string[] array, int length)
+{
+    string[] arrayToThreeChar = new string[length];
+    int k = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        int count = 0;
+        string[] oneCharArray = new string[array[i].Length];
+        for (int j = 0; j < array[i].Length; j++)
+            count++;
+        if (count < 4)
+        {
+            arrayToThreeChar[k] = array[i];
+            k++;
+        }
+    }
+    return arrayToThreeChar;
+}
+
